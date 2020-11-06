@@ -9,7 +9,7 @@ window.onload = function () {
         }
         console.log(current);
         console.log(index);
-        console.log(images[index])
-        disp.setAttribute("src", index);
+        console.log(images[index]);
+        disp.setAttribute("src", images[index]);
     });
 };
