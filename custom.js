@@ -7,9 +7,6 @@ window.onload = function () {
         if (index >= images.length) {
             index = 0;
         }
-        console.log(current);
-        console.log(index);
-        console.log(images[index]);
         disp.setAttribute("src", images[index]);
     });
 };
