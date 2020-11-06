@@ -18,12 +18,16 @@
         <button class="say-hi-button"></button>
     </div>
     <a-scene embedded arjs>
+        <a-assets>
+            <img id="viz1" src="viz.jpg">
+        </a-assets>
         <a-marker preset="hiro">
-            <a-image
+            <a-entity
+                geometry="primitive: plane"
+                src="#viz1"
                 position="0 0 0"
                 scale="0.05 0.05 0.05"
-                src="viz.jpg">
-            </a-image>
+            ></a-entity>
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
