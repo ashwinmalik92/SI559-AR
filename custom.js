@@ -1,8 +1,13 @@
 window.onload = function () {
     document.querySelector(".img-switch").addEventListener("click", function () {
-        // here you can change also a-scene or a-entity properties, like
-        // changing your 3D model source, size, position and so on
-        // or you can just open links, trigger actions...
-        alert("Hi there!");
+        let disp = document.querySelector("#display");
+        var images = ["viz1", "viz2", "viz3"];
+        var current = disp.getAttribute("src");
+        var currentIndex = images.indexOf(current);
+        var newIndex = currentIndex + 1;
+        if (newIndex >= images.length) {
+            newIndex = 0;
+        }
+        document.querySelector("#display").setAttribute("src", newIndex);
     });
 };
