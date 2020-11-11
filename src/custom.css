@@ -2,62 +2,49 @@ body {
     margin: 0;
     overflow: hidden;
 }
-.gallery-tray {
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    width: 100%;
-    height: 5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-}
-.btn-gallery {
+button {
     margin: 0 0.5em;
     padding: 0.25em;
     border-radius: 5px;
     border: none;
     background: #F5FFFA;
     color: #322F42;
-    width: 10em;
-    height: 10em;
     cursor: pointer;
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
-.gallery-img {
-    height: 5em;
-}
-
-.btn-tray {
+.tray {
     position: absolute;
-    bottom: 10px;
     left: 0;
     width: 100%;
-    height: 5em;
+    height: 10em;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 10;
+}
+
+.gallery {
+    bottom: 100px;
+}
+.btn-gallery {
+    width: 8em;
+    height: 8em;
+}
+.gallery-img {
+    height: 6em;
+}
+
+.actions {
+    bottom: 10px;
 }
 .btn-group {
     margin: 0 2.5em;
 }
 .btn-action {
-    margin: 0 0.5em;
-    padding: 0.25em;
-    border-radius: 5px;
-    border: none;
-    background: #F5FFFA;
-    color: #322F42;
     width: 5em;
     height: 5em;
-    cursor: pointer;
-    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 .btn-img {
     height: 2em;
