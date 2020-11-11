@@ -17,8 +17,22 @@ window.onload = function () {
     });
 
     scaleMinus.addEventListener("click", function () {
+        var current = parseInt(dispCanvas.getAttribute("height"));
+        var scaled = current - 1;
+        console.log(scaled);
+    });
+
+    scalePlus.addEventListener("click", function () {
+        var current = parseInt(dispCanvas.getAttribute("height"));
+        var scaled = current + 1;
+        console.log(scaled);
+    });
+
+    rotateMinus.addEventListener("click", function () {
         var current = dispCanvas.getAttribute("rotation");
-        current = parseInt(current.split(" ")[1]);
+        console.log(current);
+        current = parseInt(current.split()[1]);
+        console.log(current);
         var rotated = current - 45;
         if (rotated < 0) {
             rotated += 360;
@@ -26,9 +40,11 @@ window.onload = function () {
         console.log(rotated);
     });
 
-    scalePlus.addEventListener("click", function () {
+    rotatePlus.addEventListener("click", function () {
         var current = dispCanvas.getAttribute("rotation");
-        current = parseInt(current.split(" ")[1]);
+        console.log(current);
+        current = parseInt(current.split()[1]);
+        console.log(current);
         var rotated = current + 45;
         if (rotated >= 360) {
             rotated -= 360;
