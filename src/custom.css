@@ -18,7 +18,6 @@ button {
     position: absolute;
     left: 0;
     width: 100%;
-    height: 10em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,25 +25,27 @@ button {
 }
 
 .gallery {
-    bottom: 100px;
+    bottom: 50px;
+    height: 10em;
 }
 .btn-gallery {
     width: 8em;
     height: 8em;
 }
 .gallery-img {
-    height: 6em;
+    width: 7em;
 }
 
 .actions {
     bottom: 10px;
+    height: 6em;
 }
 .btn-group {
     margin: 0 2.5em;
 }
 .btn-action {
-    width: 5em;
-    height: 5em;
+    width: 4em;
+    height: 4em;
 }
 .btn-img {
     height: 2em;
