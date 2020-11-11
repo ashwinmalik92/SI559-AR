@@ -10,12 +10,21 @@ window.onload = function () {
     
     imgElem1.addEventListener("click", function () {
         dispCanvas.setAttribute("src", "#viz1");
+        imgElem1.classList.add("selected");
+        imgElem2.classList.remove("selected");
+        imgElem3.classList.remove("selected");
     });
     imgElem2.addEventListener("click", function () {
         dispCanvas.setAttribute("src", "#viz2");
+        imgElem1.classList.remove("selected");
+        imgElem2.classList.add("selected");
+        imgElem3.classList.remove("selected");
     });
     imgElem3.addEventListener("click", function () {
         dispCanvas.setAttribute("src", "#viz3");
+        imgElem1.classList.remove("selected");
+        imgElem2.classList.remove("selected");
+        imgElem3.classList.add("selected");
     });
 
     scaleMinus.addEventListener("click", function () {

@@ -25,7 +25,7 @@ button {
 }
 
 .gallery {
-    bottom: 50px;
+    bottom: 80px;
     height: 10em;
 }
 .btn-gallery {
@@ -33,7 +33,10 @@ button {
     height: 8em;
 }
 .gallery-img {
-    width: 7em;
+    width: 5em;
+}
+.selected {
+    background: #C7F0DB;
 }
 
 .actions {
