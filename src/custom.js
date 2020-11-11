@@ -18,14 +18,26 @@ window.onload = function () {
 
     scaleMinus.addEventListener("click", function () {
         var current = parseInt(dispCanvas.getAttribute("height"));
-        var scaled = current - 1;
+        if (current > 1) {
+            var scaled = current - 1;
+        } else if (current > 0) {
+            var scaled = current - .1;
+        } else {
+            var scaled = 0;
+        }
         dispCanvas.setAttribute("width", scaled);
         dispCanvas.setAttribute("height", scaled);
     });
-    
+
     scalePlus.addEventListener("click", function () {
         var current = parseInt(dispCanvas.getAttribute("height"));
-        var scaled = current + 1;
+        if (current >= 1) {
+            var scaled = current + 1;
+        } else if (current >= 0) {
+            var scaled = current + .1;
+        } else {
+            var scaled = 0;
+        }
         dispCanvas.setAttribute("width", scaled);
         dispCanvas.setAttribute("height", scaled);
     });
@@ -36,7 +48,8 @@ window.onload = function () {
         if (rotated < 0) {
             rotated += 360;
         }
-        console.log(rotated);
+        rotated = "-90 " + rotated.toString() + " 0";
+        dispCanvas.setAttribute("rotation", rotated);
     });
 
     rotatePlus.addEventListener("click", function () {
@@ -45,7 +58,8 @@ window.onload = function () {
         if (rotated >= 360) {
             rotated -= 360;
         }
-        console.log(rotated);
+        rotated = "-90 " + rotated.toString() + " 0";
+        dispCanvas.setAttribute("rotation", rotated);
     });
 
     /*
