@@ -8,17 +8,16 @@
 <body>
     <div class="buttons">
         <button id="img-next">Next image</button>
-        <button id="scale-minus">Smaller</button>
-        <button id="scale-plus">Larger</button>
-        <button id="rotate-minus">Counter</button>
-        <button id="rotate-plus">Clock</button>
+        <button id="scale-minus"><img src="img/scale-minus.svg"></button>
+        <button id="scale-plus"><img src="img/scale-plus.svg"></button>
+        <button id="rotate-minus"><img src="img/rotate-minus.svg"></button>
+        <button id="rotate-plus"><img src="img/rotate-plus.svg"></button>
     </div>
     <a-scene embedded arjs>
         <a-assets>
-            <img id="viz1" src="img/viz1.jpg">
-            <img id="viz2" src="img/viz2.jpg">
+            <img id="viz1" src="img/viz1.png">
+            <img id="viz2" src="img/viz2.png">
             <img id="viz3" src="img/viz3.png">
-            <img id="viz4" src="img/viz4.png">
         </a-assets>
         <a-marker preset="hiro">
             <a-plane
