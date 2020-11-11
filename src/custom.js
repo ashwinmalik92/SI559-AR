@@ -22,8 +22,8 @@ window.onload = function () {
     mc.on("pinch rotate", function(ev) {
         var current = dispElement.getAttribute("rotation");
         current = parseInt(current.split(" ")[1]);
-        console.log(current);
         var rotated = current + ev.rotation;
-        console.log(rotated);
+        var combo = current.toString() + " to " + rotated.toString();
+        document.querySelector("#helper").innerText = combo;
     });
 };
