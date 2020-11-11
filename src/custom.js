@@ -1,27 +1,27 @@
 window.onload = function () {
     var dispCanvas = document.querySelector("#display");
-    var imgElem1 = document.querySelector("#viz1");
-    var imgElem2 = document.querySelector("#viz2");
-    var imgElem3 = document.querySelector("#viz3");
+    var imgElem1 = document.querySelector("#gallery-viz1");
+    var imgElem2 = document.querySelector("#gallery-viz2");
+    var imgElem3 = document.querySelector("#gallery-viz3");
     var scaleMinus = document.querySelector("#scale-minus");
     var scalePlus = document.querySelector("#scale-plus");
     var rotateMinus = document.querySelector("#rotate-minus");
     var rotatePlus = document.querySelector("#rotate-plus");
     
     imgElem1.addEventListener("click", function () {
-        dispCanvas.setAttribute("src", "#viz1");
+        dispCanvas.setAttribute("src", "#gallery-viz1");
         imgElem1.classList.add("selected");
         imgElem2.classList.remove("selected");
         imgElem3.classList.remove("selected");
     });
     imgElem2.addEventListener("click", function () {
-        dispCanvas.setAttribute("src", "#viz2");
+        dispCanvas.setAttribute("src", "#gallery-viz2");
         imgElem1.classList.remove("selected");
         imgElem2.classList.add("selected");
         imgElem3.classList.remove("selected");
     });
     imgElem3.addEventListener("click", function () {
-        dispCanvas.setAttribute("src", "#viz3");
+        dispCanvas.setAttribute("src", "#gallery-viz3");
         imgElem1.classList.remove("selected");
         imgElem2.classList.remove("selected");
         imgElem3.classList.add("selected");
