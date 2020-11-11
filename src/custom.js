@@ -1,19 +1,21 @@
 window.onload = function () {
     var dispCanvas = document.querySelector("#display");
-    var imgNext = document.querySelector("#img-next");
+    var imgElem1 = document.querySelector("#viz1");
+    var imgElem2 = document.querySelector("#viz2");
+    var imgElem3 = document.querySelector("#viz3");
     var scaleMinus = document.querySelector("#scale-minus");
     var scalePlus = document.querySelector("#scale-plus");
     var rotateMinus = document.querySelector("#rotate-minus");
     var rotatePlus = document.querySelector("#rotate-plus");
     
-    imgNext.addEventListener("click", function () {
-        var images = ["#viz1", "#viz2", "#viz3"];
-        var current = dispCanvas.getAttribute("src");
-        var index = images.indexOf(current) + 1;
-        if (index >= images.length) {
-            index = 0;
-        }
-        dispCanvas.setAttribute("src", images[index]);
+    imgElem1.addEventListener("click", function () {
+        dispCanvas.setAttribute("src", "#viz1");
+    });
+    imgElem2.addEventListener("click", function () {
+        dispCanvas.setAttribute("src", "#viz2");
+    });
+    imgElem3.addEventListener("click", function () {
+        dispCanvas.setAttribute("src", "#viz3");
     });
 
     scaleMinus.addEventListener("click", function () {
