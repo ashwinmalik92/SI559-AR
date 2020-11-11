@@ -1,4 +1,5 @@
 var dispElement = document.querySelector("#display");
+var bodElement = document.querySelector("#bod");
 
 window.onload = function () {
     document.querySelector(".img-switch").addEventListener("click", function () {
@@ -12,7 +13,7 @@ window.onload = function () {
     });
 };
 
-var mc = new Hammer.Manager(dispElement);
+var mc = new Hammer.Manager(bodElement);
 var pinch = new Hammer.Pinch();
 var rotate = new Hammer.Rotate();
 
@@ -20,7 +21,6 @@ pinch.recognizeWith(rotate);
 mc.add([pinch, rotate]);
 
 mc.on("pinch rotate", function(ev) {
-    ev.rotation
     var current = dispElement.getAttribute("rotation");
     current = parseInt(current.split(" ")[1]);
     console.log(current);
