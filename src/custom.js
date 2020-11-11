@@ -1,17 +1,43 @@
 window.onload = function () {
-    var dispElement = document.querySelector("#display");
-    var bodElement = document.querySelector("#bod");
-
-    document.querySelector(".img-switch").addEventListener("click", function () {
-        var images = ["#viz1", "#viz2", "#viz3"];
-        var current = dispElement.getAttribute("src");
+    var dispCanvas = document.querySelector("#display");
+    var imgNext = document.querySelector("#img-next");
+    var scaleMinus = document.querySelector("#scale-minus");
+    var scalePlus = document.querySelector("#scale-plus");
+    var rotateMinus = document.querySelector("#rotate-minus");
+    var rotatePlus = document.querySelector("#rotate-plus");
+    
+    imgNext.addEventListener("click", function () {
+        var images = ["#viz1", "#viz2", "#viz3", "#viz4"];
+        var current = dispCanvas.getAttribute("src");
         var index = images.indexOf(current) + 1;
         if (index >= images.length) {
             index = 0;
         }
-        dispElement.setAttribute("src", images[index]);
+        dispCanvas.setAttribute("src", images[index]);
     });
 
+    scaleMinus.addEventListener("click", function () {
+        var current = dispCanvas.getAttribute("rotation");
+        current = parseInt(current.split(" ")[1]);
+        var rotated = current - 45;
+        if (rotated < 0) {
+            rotated += 360;
+        }
+        console.log(rotated);
+    });
+
+    scalePlus.addEventListener("click", function () {
+        var current = dispCanvas.getAttribute("rotation");
+        current = parseInt(current.split(" ")[1]);
+        var rotated = current + 45;
+        if (rotated >= 360) {
+            rotated -= 360;
+        }
+        console.log(rotated);
+    });
+
+    /*
+    var bodElement = document.querySelector("#bod");
     var mc = new Hammer.Manager(bodElement);
     var pinch = new Hammer.Pinch();
     var rotate = new Hammer.Rotate();
@@ -26,4 +52,5 @@ window.onload = function () {
         var combo = current.toString() + " to " + rotated.toString();
         document.querySelector("#helper").innerText = combo;
     });
+    */
 };

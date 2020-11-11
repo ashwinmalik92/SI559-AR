@@ -3,18 +3,22 @@
 <link rel="stylesheet" href="src/custom.css">
 <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-<script src="src/hammer.js"></script>
+<!--<script src="src/hammer.js"></script>-->
 <script src="src/custom.js"></script>
 <body>
     <div class="buttons">
-        <button class="img-switch shadow">Next image</button>
-        <button id="helper">Next</button>
+        <button id="img-next">Next image</button>
+        <button id="scale-minus">Smaller</button>
+        <button id="scale-plus">Larger</button>
+        <button id="rotate-minus">Counter</button>
+        <button id="rotate-plus">Clock</button>
     </div>
-    <a-scene embedded arjs id="bod">
+    <a-scene embedded arjs>
         <a-assets>
             <img id="viz1" src="img/viz1.jpg">
             <img id="viz2" src="img/viz2.jpg">
             <img id="viz3" src="img/viz3.png">
+            <img id="viz4" src="img/viz4.png">
         </a-assets>
         <a-marker preset="hiro">
             <a-plane
