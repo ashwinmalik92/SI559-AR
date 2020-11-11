@@ -22,7 +22,7 @@ window.onload = function () {
         dispCanvas.setAttribute("width", scaled);
         dispCanvas.setAttribute("height", scaled);
     });
-
+    
     scalePlus.addEventListener("click", function () {
         var current = parseInt(dispCanvas.getAttribute("height"));
         var scaled = current + 1;
@@ -32,15 +32,16 @@ window.onload = function () {
 
     rotateMinus.addEventListener("click", function () {
         var current = dispCanvas.getAttribute("rotation");
-        console.log(current["y"]);
+        var rotated = current["y"] - 45;
+        if (rotated < 0) {
+            rotated += 360;
+        }
+        console.log(rotated);
     });
 
     rotatePlus.addEventListener("click", function () {
         var current = dispCanvas.getAttribute("rotation");
-        console.log(current);
-        current = parseInt(current.split()[1]);
-        console.log(current);
-        var rotated = current + 45;
+        var rotated = current["y"] + 45;
         if (rotated >= 360) {
             rotated -= 360;
         }
