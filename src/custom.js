@@ -19,25 +19,20 @@ window.onload = function () {
     scaleMinus.addEventListener("click", function () {
         var current = parseInt(dispCanvas.getAttribute("height"));
         var scaled = current - 1;
-        console.log(scaled);
+        dispCanvas.setAttribute("width", scaled);
+        dispCanvas.setAttribute("height", scaled);
     });
 
     scalePlus.addEventListener("click", function () {
         var current = parseInt(dispCanvas.getAttribute("height"));
         var scaled = current + 1;
-        console.log(scaled);
+        dispCanvas.setAttribute("width", scaled);
+        dispCanvas.setAttribute("height", scaled);
     });
 
     rotateMinus.addEventListener("click", function () {
         var current = dispCanvas.getAttribute("rotation");
-        console.log(current);
-        current = parseInt(current.split()[1]);
-        console.log(current);
-        var rotated = current - 45;
-        if (rotated < 0) {
-            rotated += 360;
-        }
-        console.log(rotated);
+        console.log(current["y"]);
     });
 
     rotatePlus.addEventListener("click", function () {
