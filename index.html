@@ -5,12 +5,21 @@
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 <script src="src/custom.js"></script>
 <body>
-    <div class="buttons">
-        <button id="img-next">Next</button>
-        <button id="scale-minus"><img class="button-img" src="img/scale-minus.svg"></button>
-        <button id="scale-plus"><img class="button-img" src="img/scale-plus.svg"></button>
-        <button id="rotate-minus"><img class="button-img" src="img/rotate-minus.svg"></button>
-        <button id="rotate-plus"><img class="button-img" src="img/rotate-plus.svg"></button>
+    <div class="gallery-tray">
+        <button class="btn-gallery" id="viz1"><img class="gallery-img" src="img/viz1.png"></button>
+    </div>
+    <div class="btn-tray">
+        <div class="btn-group">
+            <button class="btn-action" id="img-next">Next</button>
+        </div>
+        <div class="btn-group">
+            <button class="btn-action" id="scale-minus"><img class="btn-img" src="img/scale-minus.svg"></button>
+            <button class="btn-action" id="scale-plus"><img class="btn-img" src="img/scale-plus.svg"></button>
+        </div>
+        <div class="btn-group">
+            <button class="btn-action" id="rotate-minus"><img class="btn-img" src="img/rotate-minus.svg"></button>
+            <button class="btn-action" id="rotate-plus"><img class="button-img" src="img/rotate-plus.svg"></button>
+        </div>
     </div>
     <a-scene embedded arjs>
         <a-assets>
