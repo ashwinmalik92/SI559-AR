@@ -46,9 +46,9 @@ window.onload = function () {
 
     rotateMinus.addEventListener("click", function () {
         var current = dispCanvas.getAttribute("rotation");
-        var rotated = current["y"] - 45;
-        if (rotated < 0) {
-            rotated += 360;
+        var rotated = current["y"] + 45;
+        if (rotated >= 360) {
+            rotated -= 360;
         }
         rotated = "-90 " + rotated.toString() + " 0";
         dispCanvas.setAttribute("rotation", rotated);
@@ -56,9 +56,9 @@ window.onload = function () {
 
     rotatePlus.addEventListener("click", function () {
         var current = dispCanvas.getAttribute("rotation");
-        var rotated = current["y"] + 45;
-        if (rotated >= 360) {
-            rotated -= 360;
+        var rotated = current["y"] - 45;
+        if (rotated < 0) {
+            rotated += 360;
         }
         rotated = "-90 " + rotated.toString() + " 0";
         dispCanvas.setAttribute("rotation", rotated);
